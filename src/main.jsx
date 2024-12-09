@@ -9,7 +9,7 @@ import Faq from './components/Faq.jsx';
 import Contact from './components/Contact.jsx';
 import Packages from './components/Packages.jsx';
 import Resources from './components/Resources.jsx';
-
+import Register from './components/Register.jsx';
 
 
 const router = createHashRouter([
@@ -40,6 +40,10 @@ const router = createHashRouter([
       {
         path: 'contact',
         element: <Contact />,
+      },
+      {
+        path: 'register',
+        element: <Register />,
       },
       
     

@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { NavLink } from 'react-router-dom';
-
+import logo from "../assets/logo.png"
+import { CiMenuBurger } from "react-icons/ci";
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -8,16 +9,19 @@ const Navbar = () => {
   return (
     <nav className="fixed z-50 w-full h-20  bg-zinc-900 backdrop-filter backdrop-blur-2xl p-4 flex justify-between items-center">
       {/* Logo */}
-      <img className="h-12 md:h-20"  alt="Logo" />
+      <img src={logo} className="h-14"  alt="Logo" />
 
       {/* Hamburger Icon for mobile view */}
       <div className="md:hidden flex items-center">
+
         <button
+        
           onClick={() => setIsMenuOpen(!isMenuOpen)}
           aria-label="Toggle navigation"
           aria-expanded={isMenuOpen}
           className="text-black focus:outline-none"
         >
+          <CiMenuBurger className='text-black bg-white' />
           
         </button>
       </div>
@@ -26,7 +30,7 @@ const Navbar = () => {
       <div
         className={`${
           isMenuOpen ? 'flex' : 'hidden'
-        } md:flex flex-col md:flex-row md:justify-center ml-32 md:items-center absolute md:static top-20 left-0 w-full text-white md:w-auto bg-white md:bg-transparent shadow-md md:shadow-none space-y-4 md:space-y-0 md:space-x-6 py-4 md:py-0 px-6 md:px-0`}
+        } md:flex flex-col md:flex-row md:justify-center ml-32 md:items-center absolute md:static top-20 left-0 w-full text-black md:text-white md:w-auto bg-white md:bg-transparent shadow-md md:shadow-none space-y-4 md:space-y-0 md:space-x-6 py-4 md:py-0 px-6 md:px-0`}
       >
         <NavLink
           to="/"

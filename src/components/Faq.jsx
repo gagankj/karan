@@ -37,19 +37,18 @@ function Faq() {
   return (
     <div className="flex overflow-hidden pt-16 flex-col bg-zinc-50 pb-[532px] max-md:pb-24">
       
-      <div className="flex relative flex-col items-center px-20 pt-7 pb-14 w-full min-h-[408px] max-md:px-5 max-md:max-w-full">
+      <div className="flex relative flex-col justify-center items-center px-20 py-10 w-full min-h-[364px] max-md:px-5 max-md:max-w-full">
         <img
           loading="lazy"
-          srcSet="https://cdn.builder.io/api/v1/image/assets/TEMP/7210092fc8cd8f03c8dee4d74f40e70de3e96a4d7f37790f28082f012bd35860?placeholderIfAbsent=true&apiKey=b3ab5871af914b8aa297a76ea135062a&width=100 100w, https://cdn.builder.io/api/v1/image/assets/TEMP/7210092fc8cd8f03c8dee4d74f40e70de3e96a4d7f37790f28082f012bd35860?placeholderIfAbsent=true&apiKey=b3ab5871af914b8aa297a76ea135062a&width=200 200w, https://cdn.builder.io/api/v1/image/assets/TEMP/7210092fc8cd8f03c8dee4d74f40e70de3e96a4d7f37790f28082f012bd35860?placeholderIfAbsent=true&apiKey=b3ab5871af914b8aa297a76ea135062a&width=400 400w, https://cdn.builder.io/api/v1/image/assets/TEMP/7210092fc8cd8f03c8dee4d74f40e70de3e96a4d7f37790f28082f012bd35860?placeholderIfAbsent=true&apiKey=b3ab5871af914b8aa297a76ea135062a&width=800 800w, https://cdn.builder.io/api/v1/image/assets/TEMP/7210092fc8cd8f03c8dee4d74f40e70de3e96a4d7f37790f28082f012bd35860?placeholderIfAbsent=true&apiKey=b3ab5871af914b8aa297a76ea135062a&width=1200 1200w, https://cdn.builder.io/api/v1/image/assets/TEMP/7210092fc8cd8f03c8dee4d74f40e70de3e96a4d7f37790f28082f012bd35860?placeholderIfAbsent=true&apiKey=b3ab5871af914b8aa297a76ea135062a&width=1600 1600w, https://cdn.builder.io/api/v1/image/assets/TEMP/7210092fc8cd8f03c8dee4d74f40e70de3e96a4d7f37790f28082f012bd35860?placeholderIfAbsent=true&apiKey=b3ab5871af914b8aa297a76ea135062a&width=2000 2000w, https://cdn.builder.io/api/v1/image/assets/TEMP/7210092fc8cd8f03c8dee4d74f40e70de3e96a4d7f37790f28082f012bd35860?placeholderIfAbsent=true&apiKey=b3ab5871af914b8aa297a76ea135062a"
+          srcSet="https://cdn.builder.io/api/v1/image/assets/TEMP/7e5329504af8eeeac2f775c34f2ac65eaaee929434501f2e0e8b0a52a61d6d9d?placeholderIfAbsent=true&apiKey=b3ab5871af914b8aa297a76ea135062a&width=100 100w, https://cdn.builder.io/api/v1/image/assets/TEMP/7e5329504af8eeeac2f775c34f2ac65eaaee929434501f2e0e8b0a52a61d6d9d?placeholderIfAbsent=true&apiKey=b3ab5871af914b8aa297a76ea135062a&width=200 200w, https://cdn.builder.io/api/v1/image/assets/TEMP/7e5329504af8eeeac2f775c34f2ac65eaaee929434501f2e0e8b0a52a61d6d9d?placeholderIfAbsent=true&apiKey=b3ab5871af914b8aa297a76ea135062a&width=400 400w, https://cdn.builder.io/api/v1/image/assets/TEMP/7e5329504af8eeeac2f775c34f2ac65eaaee929434501f2e0e8b0a52a61d6d9d?placeholderIfAbsent=true&apiKey=b3ab5871af914b8aa297a76ea135062a&width=800 800w, https://cdn.builder.io/api/v1/image/assets/TEMP/7e5329504af8eeeac2f775c34f2ac65eaaee929434501f2e0e8b0a52a61d6d9d?placeholderIfAbsent=true&apiKey=b3ab5871af914b8aa297a76ea135062a&width=1200 1200w, https://cdn.builder.io/api/v1/image/assets/TEMP/7e5329504af8eeeac2f775c34f2ac65eaaee929434501f2e0e8b0a52a61d6d9d?placeholderIfAbsent=true&apiKey=b3ab5871af914b8aa297a76ea135062a&width=1600 1600w, https://cdn.builder.io/api/v1/image/assets/TEMP/7e5329504af8eeeac2f775c34f2ac65eaaee929434501f2e0e8b0a52a61d6d9d?placeholderIfAbsent=true&apiKey=b3ab5871af914b8aa297a76ea135062a&width=2000 2000w, https://cdn.builder.io/api/v1/image/assets/TEMP/7e5329504af8eeeac2f775c34f2ac65eaaee929434501f2e0e8b0a52a61d6d9d?placeholderIfAbsent=true&apiKey=b3ab5871af914b8aa297a76ea135062a"
           className="object-cover absolute inset-0 size-full"
         />
-        <div className="flex relative flex-col max-w-full w-[754px]">
-          <div className="text-8xl font-bold text-center  text-white max-md:mr-2 max-md:max-w-full max-md:text-4xl">
-            Frequently Asked{" Questions"}
+        <div className="flex relative flex-col w-full max-w-[1475px] max-md:max-w-full">
+          <div className="text-8xl font-bold tracking-tighter text-center text-white max-md:max-w-full max-md:text-4xl">
+          Got Questions? We've Got Answers!
           </div>
-          <div className=" mt-10 text-3xl  text-center text-stone-300 max-md:mt-10 max-md:max-w-full">
-            Find answers to our most commonly asked questions. If you still have
-            questions, feel free to reach out!
+          <div className="self-center mt-7 text-4xl tracking-tighter text-zinc-100 max-md:max-w-full">
+          Find Clear and Quick Solutions to All Your Driving School Queries.
           </div>
         </div>
       </div>
