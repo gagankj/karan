@@ -1,213 +1,152 @@
-import React, { useState } from 'react';
-import { FaChalkboardTeacher, FaCar } from 'react-icons/fa';
-import { GiRoad } from 'react-icons/gi';
-import { AiOutlineCalendar } from 'react-icons/ai';
-import { BiGroup } from 'react-icons/bi';
-import { GrPrevious } from "react-icons/gr";
-import { GrNext } from "react-icons/gr";
-import { NavLink } from 'react-router-dom';
-import {  FaUserGraduate, FaRedoAlt } from "react-icons/fa";
-
-const topics = [
-  "Traffic rules and regulations",
-  "Emergency handling techniques",
-  "Defensive driving practices",
-];
-
-function About() {
-
-  const cards = [
-    {
-      icon: <FaChalkboardTeacher size={50} className="text-blue-600" />,
-      title: 'Expert Instructors',
-      description:
-        'Our certified and experienced instructors are patient, professional, and committed to helping you succeed. They tailor each lesson to your unique learning style, ensuring a comfortable and productive experience.',
-    },
-    {
-      icon: <FaCar size={50} className="text-blue-600" />,
-      title: 'Modern Training Fleet',
-      description:
-        'Learn in our well-maintained, dual-control vehicles designed for safety and comfort. These state-of-the-art cars offer the ideal environment for gaining hands-on driving experience.',
-    },
-    {
-      icon: <GiRoad size={50} className="text-blue-600" />,
-      title: 'Comprehensive Driving Lessons',
-      description:
-        'From mastering basic driving skills to understanding traffic laws and defensive driving techniques, our lessons are structured to make you a confident and responsible driver.',
-    },
-    {
-      icon: <AiOutlineCalendar size={50} className="text-blue-600" />,
-      title: 'Flexible Scheduling',
-      description:
-        'Busy schedule? No problem! We offer evening, weekend, and customized lesson plans to fit your availability, making it easy to learn at your own pace.',
-    },
-    {
-      icon: <BiGroup size={50} className="text-blue-600" />,
-      title: 'Inclusive Learning Environment',
-      description:
-        'We pride ourselves on creating a friendly, supportive atmosphere for students of all ages and backgrounds. At Karan Driving School, every learner feels welcome and empowered.',
-    },
-  ];
-
-  const [currentIndex, setCurrentIndex] = useState(0);
-
-  const nextSlide = () => {
-    setCurrentIndex((prevIndex) => (prevIndex + 1) % cards.length);
-  };
-
-  const prevSlide = () => {
-    setCurrentIndex((prevIndex) =>
-      prevIndex === 0 ? cards.length - 1 : prevIndex - 1
-    );
-  };
-
-  const getVisibleCards = () => {
-    const firstCardIndex = currentIndex;
-    const secondCardIndex = (currentIndex + 1) % cards.length;
-    return [cards[firstCardIndex], cards[secondCardIndex]];
-  };
+import React from 'react'
+import logo from "../assets/logo.png"
+import mission from "../assets/mission.gif"
+import vision from "../assets/vision.gif"
+import why from "../assets/whyUs.png"
 
 
+
+
+
+
+
+
+const About = () => {
   return (
-    <div className="flex overflow-hidden flex-col pt-16 bg-zinc-50">
-      
-      <div className="flex relative flex-col justify-center items-center px-20 py-14 w-full min-h-[273px] max-md:px-5 max-md:max-w-full">
-        <img
-          loading="lazy"
-          srcSet="https://cdn.builder.io/api/v1/image/assets/TEMP/3663851d1aff66d9978c1c217ddf39795a623986f9d7a0b0c807ea0801b84d31?placeholderIfAbsent=true&apiKey=b3ab5871af914b8aa297a76ea135062a&width=100 100w, https://cdn.builder.io/api/v1/image/assets/TEMP/3663851d1aff66d9978c1c217ddf39795a623986f9d7a0b0c807ea0801b84d31?placeholderIfAbsent=true&apiKey=b3ab5871af914b8aa297a76ea135062a&width=200 200w, https://cdn.builder.io/api/v1/image/assets/TEMP/3663851d1aff66d9978c1c217ddf39795a623986f9d7a0b0c807ea0801b84d31?placeholderIfAbsent=true&apiKey=b3ab5871af914b8aa297a76ea135062a&width=400 400w, https://cdn.builder.io/api/v1/image/assets/TEMP/3663851d1aff66d9978c1c217ddf39795a623986f9d7a0b0c807ea0801b84d31?placeholderIfAbsent=true&apiKey=b3ab5871af914b8aa297a76ea135062a&width=800 800w, https://cdn.builder.io/api/v1/image/assets/TEMP/3663851d1aff66d9978c1c217ddf39795a623986f9d7a0b0c807ea0801b84d31?placeholderIfAbsent=true&apiKey=b3ab5871af914b8aa297a76ea135062a&width=1200 1200w, https://cdn.builder.io/api/v1/image/assets/TEMP/3663851d1aff66d9978c1c217ddf39795a623986f9d7a0b0c807ea0801b84d31?placeholderIfAbsent=true&apiKey=b3ab5871af914b8aa297a76ea135062a&width=1600 1600w, https://cdn.builder.io/api/v1/image/assets/TEMP/3663851d1aff66d9978c1c217ddf39795a623986f9d7a0b0c807ea0801b84d31?placeholderIfAbsent=true&apiKey=b3ab5871af914b8aa297a76ea135062a&width=2000 2000w, https://cdn.builder.io/api/v1/image/assets/TEMP/3663851d1aff66d9978c1c217ddf39795a623986f9d7a0b0c807ea0801b84d31?placeholderIfAbsent=true&apiKey=b3ab5871af914b8aa297a76ea135062a"
-          className="object-cover absolute inset-0 size-full"
-        />
-        <div className="flex relative flex-col max-w-full w-[641px]">
-          <div className="self-center text-center text-8xl font-bold  text-white max-md:text-4xl">
-            About Us
-          </div>
-          <div className="mt-2 text-3xl tracking-tight  text-center text-zinc-300 max-md:max-w-full">
-            Empowering Safe, Confident Drivers for Life
-          </div>
-        </div>
+    <div className='pt-20 tracking-tight bg-[#D4EBF8]'>
+      <div className="w-screen h-44  text-center py-10 text-white bg-[#0A3981]">
+        <h1 className='text-5xl font-bold mb-2 md:text-6xl lg:text-7xl'>About Us</h1>
+        <h1>Empowering Safe, Confident Drivers for Life</h1>
       </div>
-      <div className="flex flex-col items-center self-center mt-24 w-full max-w-[1515px] max-md:mt-10 max-md:max-w-full">
-        <div className="text-7xl font-bold tracking-tighter text-black max-md:max-w-full max-md:text-4xl">
-          Karan Driving School
-        </div>
-        <div className="self-start mt-20 text-3xl tracking-tight text-justify text-neutral-700 w-[804px] max-md:mt-10 max-md:max-w-full">
-        Welcome to Karan Driving School, where driving excellence meets personalized instruction. We are dedicated to empowering individuals with the skills, confidence, and knowledge they need to become safe and responsible drivers. Whether you’re just starting or need advanced training, we’re here to guide you every step of the way.
-        </div>
-        
-        <div className="mt-32 ml-12 text-7xl p-4 font-bold tracking-tighter text-black max-md:mt-10 max-md:max-w-full max-md:text-4xl">
-          Why Choose Us?
+
+      <div className='px-10 py-10 lg:px-20 '>
+
+
+      <h1 className='text-center text-xl'>Welcome to</h1>
+      <h1 className='text-center text-4xl font-bold md:text-5xl lg:text-6xl tracking-tight'>Karan Driving School</h1>
+
+      <div className='flex lg:px-32 text-zinc-700 mt-4 flex-col-reverse gap-6 items-center lg:items-start
+      lg:text-2xl lg:mt-10 tracking-tight md:flex-row'>
+        <p className='lg:pt-6'>Welcome to Karan Driving School, where driving excellence meets personalized instruction. We are dedicated to empowering individuals with the skills, confidence, and knowledge they need to become safe and responsible drivers. Whether you’re just starting or need advanced training, we’re here to guide you every step of the way.</p>
+
+        <img className='w-44 h-32 lg:w-80 lg:h-64' src={logo} alt="" />
+
+      </div>
+    
+      </div>
+
+      <div className='w-screen h-[630px] md:h-[460px] px-10 py-10 justify-center items-center  flex flex-col gap-8 lg:gap-14 md:flex-row bg-[#0A3981]'>
+
+        <div className='bg-white w-80 lg:w-96 flex flex-col items-center rounded-xl h-80'>
+          <img className='h-32' src={mission} alt="" />
+
+          <h1 className='text-3xl font-bold md:text-4xl lg:text-5xl tracking-tight mt-2 text-[#0A3981]'>Mission</h1>
+          <p className='text-center my-2  md:text-xl px-6 text-zinc-700'>To instill safe driving habits and prepare students for a lifetime of responsible driving.</p>
+          
+          
+          
+
+
         </div>
 
-        <div className="relative w-4/5 text-white p-8 overflow-hidden">
-      {/* <h1 className="text-center text-2xl font-bold mb-6">Our Features</h1> */}
-      <div className="flex justify-center items-center">
-        <button
-          onClick={prevSlide}
-          className="absolute left-0 text-black font-bold  text-3xl  p-3 rounded-full"
-        >
-          <GrPrevious />
-        </button>
-        <div className="flex gap-6">
-          {getVisibleCards().map((card, index) => (
-            <div
-              key={index}
-              className="flex flex-col items-center text-center bg-zinc-100 rounded-lg shadow-lg p-6 w-96"
-            >
-              <div>{card.icon}</div>
-              <h2 className="text-2xl tracking-tight text-zinc-900 font-bold mt-4">{card.title}</h2>
-              <p className="mt-2 text-xl text-zinc-700">{card.description}</p>
-            </div>
-          ))}
+        <div className='bg-white w-80 lg:w-96 flex flex-col items-center rounded-xl h-80'>
+          <img className='h-32' src={vision} alt="" />
+          <h1 className='text-3xl font-bold md:text-4xl lg:text-5xl tracking-tight mt-2 text-[#0A3981]'>Vision</h1>
+          <p className='text-center my-2 md:text-xl px-6  text-zinc-700'>To be a trusted leader in driver education, shaping safe drivers for a safer community.</p>
+
         </div>
-        <button
-          onClick={nextSlide}
-          className="absolute right-0 text-zinc-900 text-3xl  p-3 rounded-full"
-        >
-          <GrNext />
-        </button>
       </div>
+
+      <div className=" w-screen md:mt-4  flex flex-col py-10 justify-center items-center   px-6 md:px-12 ">
+
+        <h1 className="text-black font-bold text-4xl tracking-tight md:text-5xl lg:text-6xl">Why Choose Us?</h1>
+
+        <h3 className="text-zinc-700 mt-2 text-center">Your Journey to Safe and Skilled Driving Starts Here</h3>
+
+        <div className="w-4/5  md:items-start md:flex justify-center  lg:items-center gap-10 lg:justify-center my-10 h-[80%]">
+
+        <div className="flex flex-col tracking-tight md:text-2xl  lg:text-2xl gap-4">
+          <div className="text-black flex items-center   gap-4">
+            <div>01</div>
+            <div className="bg-[#0A3981] text-white rounded-full w-full  px-4 py-2">Expert Instructors</div>
+          </div>
+          <div className="text-black flex items-center gap-4">
+            <div>02</div>
+            <div className="bg-white text-zinc-700 rounded-full w-96 px-4 py-2">Inclusive Learning Environment</div>
+          </div>
+          <div className="ttext-black flex items-center gap-4">
+            <div>03</div>
+            <div className="bg-[#0A3981] text-white rounded-full w-96 px-4 py-2">Comprehensive Driving Lessons</div>
+          </div>
+          <div className="text-black flex items-center gap-4">
+            <div>04</div>
+            <div className="bg-white text-zinc-700 rounded-full w-96 px-4 py-2">Modern Training Fleet</div>
+          </div>
+          <div className="text-black flex items-center gap-4">
+            <div>05</div>
+            <div className="bg-[#0A3981] text-white rounded-full px-4 w-96 py-2">Flexible Scheduling</div>
+          </div>
+        </div>
+
+
+        <div className="hidden lg:block">
+          <img src={why} alt="" />
+        </div>
+
+
+        </div>
+
+
+      </div>
+
+
+      <div className='px-10  lg:px-44 pb-10 text-center'>
+        <h1 className='text-4xl font-bold tracking-tight lg:text-6xl'>Our Commitment to Road Safety</h1>
+
+        <h1 className='text-xl text-zinc-700 my-2'>Safety is at the heart of our training.</h1>
+
+        <div className='flex flex-col items-center justify-center mt-4 text-white font-bold md:flex-row gap-4 lg:gap-10 '>
+          <div className='w-60 h-32 flex items-center hover:scale-105 hover:ease-in-out hover:transition py-4 px-4 rounded-lg bg-[#0A3981]'>
+            <h1 className='text-2xl'>Traffic Rules and Regulations</h1>
+          </div>
+          <div className='w-60 h-32 hover:ease-in-out hover:transition hover:scale-105 py-4 px-4 rounded-lg  bg-[#0A3981]'>
+            <h1 className='text-2xl'>Emergency Handling Techniques</h1>
+          </div>
+          <div className='w-60 h-32 hover:ease-in-out hover:transition hover:scale-105 flex items-center py-4 px-4 rounded-lg  bg-[#0A3981]'>
+            <h1 className='text-2xl'>Defensive Driving Practices</h1>
+          </div>
+        </div>
+
+        <h1 className='mt-6'>By choosing Karan Driving School, you’ll develop not just the skills to pass your driving test but the mindset to drive safely for life.</h1>
+      </div>
+
+
+      <div className='px-10  lg:px-44 bg-[#0A3981] py-10 text-center'>
+        <h1 className='text-4xl font-bold text-white tracking-tight lg:text-6xl'>Who We Serve</h1>
+
+        <h1 className='text-xl text-white my-2'>We proudly serve students in Lower Mainland and surrounding areas, including:</h1>
+
+        <div className='flex flex-col items-center justify-center mt-4 text-white font-bold md:flex-row gap-4 lg:gap-10 '>
+          <div className='w-60 h-36 hover:ease-in-out hover:transition hover:scale-105 flex items-center py-4 px-4 rounded-lg bg-white'>
+            <h1 className='text-2xl text-zinc-700'>Teenagers Preparing for Their First License</h1>
+          </div>
+          <div className='w-60 h-36 hover:ease-in-out hover:transition hover:scale-105   py-4 px-4 flex items-center rounded-lg  bg-white'>
+            <h1 className='text-2xl text-zinc-700'>Adult Learners Starting Fresh</h1>
+          </div>
+          <div className='w-60 h-36 hover:ease-in-out hover:transition hover:scale-105 flex items-center   py-4 px-4 rounded-lg  bg-white'>
+            <h1 className='text-2xl text-zinc-700'>Drivers Looking to Regain Confidence</h1>
+          </div>
+        </div>
+
+        <h1 className='mt-6 text-white'>By choosing Karan Driving School, you’ll develop not just the skills to pass your driving test but the mindset to drive safely for life.</h1>
+      </div>
+
+
+
+
+
     </div>
-        
-        <div className="mt-32 text-7xl font-bold tracking-tighter text-zinc-900 max-md:mt-10 max-md:max-w-full max-md:text-4xl">
-          Our Commitment to Road Safety
-        </div>
-        <h3 className='text-3xl text-zinc-700 tracking-tight mt-2'>Safety is at the heart of our training. </h3>
-        <div className="mt-14  flex items-center justify-center">
-      <div className="grid gap-8 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
-        {topics.map((topic, index) => (
-          <div
-            key={index}
-            className="bg-blue-600 text-center text-white p-6 rounded-full shadow-md transform transition-transform duration-300 hover:scale-105 hover:bg-blue-700"
-          >
-            <h2 className="text-2xl tracking-tight font-medium text-white">{topic}</h2>
-          </div>
-        ))}
-      </div>
-    </div>
-      </div>
-      <h3 className='text-center text-zinc-700 mt-10 text-xl'>By choosing Karan Driving School, you’ll develop not just the skills to pass your driving test but the mindset to drive safely for life.</h3>
-      <div className=" text-center flex flex-col items-center py-16">
-
-      <section className=" text-gray-100 mt-14 py-12 px-6 md:px-12 lg:px-24">
-      <div className="max-w-4xl mx-auto text-center">
-        <h2 className="text-7xl font-bold tracking-tight text-blue-600 mb-6 animate-bounce ">
-          Who We Serve
-        </h2>
-        <p className="text-xl text-zinc-700 mb-8">
-          We proudly serve students in Lower Mainland and surrounding areas, including:
-        </p>
-
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-          {/* Card 1 */}
-          <div className="flex flex-col items-center p-6 bg-zinc-100 rounded-lg shadow-lg transform hover:scale-105 transition-transform duration-300 hover:bg-zinc-200 group">
-            <FaUserGraduate className="text-blue-500 text-4xl mb-4 " />
-            <h3 className="text-xl font-semibold tracking-tight text-zinc-700 ">
-              Teenagers Preparing for Their First License
-            </h3>
-          </div>
-
-          {/* Card 2 */}
-          <div className="flex flex-col items-center p-6 bg-zinc-100 rounded-lg shadow-lg transform hover:scale-105 transition-transform duration-300 hover:bg-zinc-200 group">
-            <FaCar className="text-blue-500 text-4xl mb-4 " />
-            <h3 className="text-xl font-semibold text-zinc-700 tracking-tight ">
-              Adult Learners Starting Fresh
-            </h3>
-          </div>
-
-          {/* Card 3 */}
-          <div className="flex flex-col items-center p-6 bg-zinc-100 rounded-lg shadow-lg transform hover:scale-105 transition-transform duration-300 hover:bg-zinc-200 group">
-            <FaRedoAlt className="text-blue-500 text-4xl mb-4 " />
-            <h3 className="text-xl font-semibold text-zinc-700 ">
-              Drivers Looking to Regain Confidence
-            </h3>
-          </div>
-        </div>
-
-        <p className="text-zinc-700 mt-8 text-lg">
-          No matter your starting point, we’re here to help you succeed.
-        </p>
-      </div>
-    </section>
-
-
-      <h2 className="text-[#121212] tracking-tight mt-32 text-5xl font-bold mb-4">Ready to drive with us?</h2>
-      <p className="text-zinc-700 text-xl mb-6">Join Karan Driving School today!</p>
-      <NavLink to="/register">
-
-      <div className="group relative tracking-tight cursor-pointer mt-4 py-3 w-48  bg-blue-600 rounded-full overflow-hidden text-white text-center font-medium">
-      <span className="translate-y-0 text-xl group-hover:-translate-y-12 group-hover:opacity-0 transition-all duration-300 inline-block">
-        Register Now
-      </span>
-      <div className="flex gap-2 text-xl text-white bg-blue-600 z-10 items-center absolute left-0 top-0 h-full w-full justify-center translate-y-12 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300 rounded-full group-hover:rounded-none ">
-        <span>Register Now</span>
-      </div>
-      </div>
-</NavLink>
-    </div>
-      
-    </div>
-  );
+  )
 }
-
 
 export default About
