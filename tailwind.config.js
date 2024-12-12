@@ -7,8 +7,11 @@ export default {
   theme: {
     extend: {
       backgroundImage:{
-        'hero':"url('/heroimage.jpg')",
-        'vector1':"url('/Vector1.png')"
+        
+        "register":"url('register.png')",
+        "registerm":"url('register-mobile.png')",
+        "footer":"url('footer.png')",
+        "footerm":"url('footerm.png')"
       }
     },
   },

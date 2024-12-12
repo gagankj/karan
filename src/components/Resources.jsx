@@ -1,82 +1,86 @@
-import * as React from "react";
+import React from 'react'
+import icbc from "../assets/icbc.gif"
+import sign from "../assets/sign.gif"
+import test from "../assets/test.gif"
+import book from "../assets/book.gif"
+import safety from "../assets/safety.gif"
 
-function Resources() {
+import { NavLink } from 'react-router-dom';
 
-  const resources = [
-    {
-      icon: '🚗', // Example icon, replace with actual icon library like FontAwesome
-      title: 'ICBC Road Test',
-      description: 'Book your ICBC road test.',
-      buttonText: 'Book Now',
-      link: 'https://www.icbc.com/driver-licensing/visit-dl-office/Book-a-road-test',
-    },
-    {
-      icon: '📘',
-      title: 'Drive Smart Handbook',
-      description: 'Learn to drive smart with the official handbook.',
-      buttonText: 'Learn More',
-      link:'https://downloads.ctfassets.net/nnc41duedoho/63cHBOAVpOAQGOOMBFhFbL/0120c57c3c706956bd3e410e179642bd/driver-full.pdf'
-    },
-    {
-      icon: '📝',
-      title: 'Knowledge Test',
-      description: 'Take the knowledge test to prepare for driving.',
-      buttonText: 'Take Test',
-      link:'https://practicetest.icbc.com/#/'
-    },
-    {
-      icon: '🚦',
-      title: 'Road Signs',
-      description: 'Test your knowledge of road signs.',
-      buttonText: 'Take Test',
-      link:'https://practicetest.icbc.com/#/signs'
-    },
-    {
-      icon: '🏙️',
-      title: 'Road Safety',
-      description: 'Download the Street Sense road safety guide.',
-      buttonText: 'Learn more',
-      link:'https://www.icbc.com/road-safety/crashes-happen/street-sense'
-    },
-  ];
+
+const Resources = () => {
   return (
-    <div className="flex overflow-hidden pt-16 flex-col bg-zinc-50 pb-[522px] max-md:pb-24">
-      
-      <div className="flex relative flex-col justify-center items-center px-20 py-10 w-full min-h-[364px] max-md:px-5 max-md:max-w-full">
-        <img
-          loading="lazy"
-          srcSet="https://cdn.builder.io/api/v1/image/assets/TEMP/7e5329504af8eeeac2f775c34f2ac65eaaee929434501f2e0e8b0a52a61d6d9d?placeholderIfAbsent=true&apiKey=b3ab5871af914b8aa297a76ea135062a&width=100 100w, https://cdn.builder.io/api/v1/image/assets/TEMP/7e5329504af8eeeac2f775c34f2ac65eaaee929434501f2e0e8b0a52a61d6d9d?placeholderIfAbsent=true&apiKey=b3ab5871af914b8aa297a76ea135062a&width=200 200w, https://cdn.builder.io/api/v1/image/assets/TEMP/7e5329504af8eeeac2f775c34f2ac65eaaee929434501f2e0e8b0a52a61d6d9d?placeholderIfAbsent=true&apiKey=b3ab5871af914b8aa297a76ea135062a&width=400 400w, https://cdn.builder.io/api/v1/image/assets/TEMP/7e5329504af8eeeac2f775c34f2ac65eaaee929434501f2e0e8b0a52a61d6d9d?placeholderIfAbsent=true&apiKey=b3ab5871af914b8aa297a76ea135062a&width=800 800w, https://cdn.builder.io/api/v1/image/assets/TEMP/7e5329504af8eeeac2f775c34f2ac65eaaee929434501f2e0e8b0a52a61d6d9d?placeholderIfAbsent=true&apiKey=b3ab5871af914b8aa297a76ea135062a&width=1200 1200w, https://cdn.builder.io/api/v1/image/assets/TEMP/7e5329504af8eeeac2f775c34f2ac65eaaee929434501f2e0e8b0a52a61d6d9d?placeholderIfAbsent=true&apiKey=b3ab5871af914b8aa297a76ea135062a&width=1600 1600w, https://cdn.builder.io/api/v1/image/assets/TEMP/7e5329504af8eeeac2f775c34f2ac65eaaee929434501f2e0e8b0a52a61d6d9d?placeholderIfAbsent=true&apiKey=b3ab5871af914b8aa297a76ea135062a&width=2000 2000w, https://cdn.builder.io/api/v1/image/assets/TEMP/7e5329504af8eeeac2f775c34f2ac65eaaee929434501f2e0e8b0a52a61d6d9d?placeholderIfAbsent=true&apiKey=b3ab5871af914b8aa297a76ea135062a"
-          className="object-cover absolute inset-0 size-full"
-        />
-        <div className="flex relative flex-col w-full max-w-[1475px] max-md:max-w-full">
-          <div className="text-8xl font-bold tracking-tighter text-center text-white max-md:max-w-full max-md:text-5xl">
-          Master the Road with Confidence
-          </div>
-          <div className="self-center mt-7 text-xl text-center md:text-3xl tracking-tighter text-zinc-100 max-md:max-w-full">
-          Explore Our Comprehensive Driving Resources to Help You Become a Skilled and Safe Driver.
-          </div>
+    <div className='bg-[#D4EBF8] pt-20'>
+
+      <div className="w-screen h-44  text-center py-10 md:py-8 text-white bg-[#0A3981]">
+        <h1 className='text-4xl hidden md:block font-bold mb-2 px-2  md:text-5xl lg:text-7xl'>Master the Road with Confidence</h1>
+        <h1 className='text-5xl  md:hidden font-bold mb-2 '>Resources</h1>
+        <h1 className='lg:text-xl px-4' >Explore Our Comprehensive Driving Resources to Help You Become a Skilled and Safe Driver.</h1>
+      </div>
+
+      <div className='py-10 lg:py-20 text-center gap-6 md:gap-2 lg:gap-10 px-6 flex flex-col md:flex-row items-center justify-center'>
+        <div className='w-72 h-60 py-4 justify-center flex flex-col items-center lg:w-80 rounded-xl bg-white'>
+          <img className='h-20' src={icbc} alt="" />
+          <h1 className='font-bold tracking-tight mt-2 text-xl'>ICBC Road Test</h1>
+          <p className='text-zinc-700'>Book your ICBC road test.</p>
+          <a href="https://www.icbc.com/driver-licensing/visit-dl-office/Book-a-road-test" className="bg-blue-500 text-white mt-2 px-4 py-1 rounded-2xl">
+            Book Now
+          </a>
+        </div>
+        <div className='w-72 h-60 justify-center  py-4  flex flex-col items-center lg:w-80 rounded-xl bg-white'>
+          <img className='h-20' src={book} alt="" />
+          <h1 className='font-bold tracking-tight mt-2 text-xl'>Drive Smart Handbook</h1>
+          <p className='text-zinc-700' >Learn to drive smart with the official handbook</p>
+          <a href="https://downloads.ctfassets.net/nnc41duedoho/63cHBOAVpOAQGOOMBFhFbL/0120c57c3c706956bd3e410e179642bd/driver-full.pdf" className="bg-blue-500 text-white mt-2 px-4 py-1 rounded-2xl">
+            Learn Now
+          </a>
+        </div>
+        <div className='w-72 h-60 py-4 justify-center flex flex-col items-center lg:w-80 rounded-xl bg-white'>
+          <img className='h-20' src={test} alt="" />
+          <h1 className='font-bold tracking-tight mt-2 text-xl'>Knowledge Test</h1>
+          <p className='text-zinc-700'>Take the knowledge test to prepare for driving</p>
+          <a href="https://practicetest.icbc.com/#/" className="bg-blue-500 text-white mt-2 px-4 py-1 rounded-2xl">
+            Take Test
+          </a>
         </div>
       </div>
-      <div className="grid mt-20  px-20  grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-        {resources.map((resource, index) => (
-          <div
-            key={index}
-            className="bg-white shadow-md rounded-lg p-6 text-center flex flex-col items-center"
-          >
-            <div className="text-5xl mb-4">{resource.icon}</div>
-            <h2 className="text-2xl font-semibold mb-2 text-gray-800">{resource.title}</h2>
-            <p className="text-gray-600 mb-4">{resource.description}</p>
-            <a href={resource.link} target="_blank">
-
-            <button className="bg-blue-500 text-white py-2 px-4 rounded-full hover:bg-blue-600 transition">
-              {resource.buttonText}
-            </button>
-            </a>
-          </div>
-        ))}
+      <div className=' pb-20 text-center gap-6 md:gap-2 lg:gap-10 px-6 flex flex-col md:flex-row items-center justify-center'>
+        <div className='w-72 h-60 py-4 justify-center flex flex-col items-center lg:w-80 rounded-xl bg-white'>
+          <img className='h-20' src={sign} alt="" />
+          <h1 className='font-bold tracking-tight mt-2 text-xl'>Road Signs</h1>
+          <p className='text-zinc-700'>Test your knowledge of road signs.</p>
+          <a href="https://practicetest.icbc.com/#/signs" className="bg-blue-500 text-white mt-2 px-4 py-1 rounded-2xl">
+           Take Test
+          </a>
+        </div>
+        <div className='w-72 h-60 justify-center  py-4  flex flex-col items-center lg:w-80 rounded-xl bg-white'>
+          <img className='h-20' src={safety} alt="" />
+          <h1 className='font-bold tracking-tight mt-2 text-xl'>Road Safety</h1>
+          <p className='text-zinc-700' >Download the Street Sense road safety guide.</p>
+          <a href="https://www.icbc.com/road-safety/crashes-happen/street-sense" className="bg-blue-500 text-white mt-2 px-4 py-1 rounded-2xl">
+            Download Now
+          </a>
+        </div>
+        
       </div>
+
+
+
+
+      
+
+      
+
+
+      
+
+
+
+
+
+
     </div>
-  );
+  )
 }
 
 export default Resources

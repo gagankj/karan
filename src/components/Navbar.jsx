@@ -85,6 +85,13 @@ const Navbar = () => {
         >
           Contact
         </NavLink>
+        <NavLink
+          to="/register"
+          className="md:hidden text-white px-4 py-1 rounded-2xl bg-blue-500"
+          onClick={() => setIsMenuOpen(false)}
+        >
+          Register
+        </NavLink>
       </div>
 
       {/* Call to Action Button */}

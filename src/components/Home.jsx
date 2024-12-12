@@ -1,16 +1,46 @@
-import React,{useState} from "react";
+import React, { useEffect, useState } from 'react';
 import { NavLink } from "react-router-dom";
 import Slider from "react-slick";
 import heroVideo from "../assets/hero.mp4"
 import why from "../assets/whyUs.png"
 
 function Home() {
+
+  const [headline, setHeadline] = useState(false);
+  const [subheadline, setsubHeadline] = useState(false);
+  const [button, setbutton] = useState(false);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setHeadline(true);
+    }, 500); // Change 3000 to the number of milliseconds you want to wait
+
+    return () => clearTimeout(timer); // Cleanup the timer on component unmount
+  }, []);
+
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setbutton(true);
+    }, 1000); // Change 3000 to the number of milliseconds you want to wait
+
+    return () => clearTimeout(timer); // Cleanup the timer on component unmount
+  }, []);
+
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setsubHeadline(true);
+    }, 750); // Change 3000 to the number of milliseconds you want to wait
+
+    return () => clearTimeout(timer); // Cleanup the timer on component unmount
+  }, []);
   
 
   return (
     <div className="flex overflow-hidden flex-col items-center pt-20  bg-[#D4EBF8]">
       
-      <div className="flex relative w-screen   flex-col items-start px-20  py-64    max-md:px-5 max-md:py-44 max-md:max-w-full">
+      <div className="flex relative w-screen   flex-col items-start px-20  py-72    max-md:px-5 max-md:py-44 max-md:max-w-full">
       
       <video 
     className="absolute top-0 left-0 w-full h-screen object-cover"
@@ -20,14 +50,14 @@ function Home() {
     muted 
     >
   </video>
-        <div className="relative w-full text-center  text-8xl font-semibold tracking-tight text-white max-md:max-w-full max-md:text-7xl">
+        <div className={` transition-opacity duration-1000 ${headline ? 'opacity-100' : 'opacity-0'} relative w-full text-center  text-8xl font-semibold tracking-tight text-white max-md:max-w-full max-md:text-7xl`}>
           <span className="font-semibold">Master the Art of Driving </span>
           
         </div>
-        <div className="relative w-full text-center mt-6 text-3xl tracking-tight text-white max-md:max-w-full">
+        <div className={`transition-opacity duration-1000 ${subheadline ? 'opacity-100' : 'opacity-0'} relative w-full text-center mt-6 text-3xl tracking-tight text-white max-md:max-w-full`}>
           Learn Safe and Confident Driving from Experts
         </div>
-        <div className=" md:gap-4 w-full mt-4 flex flex-col  items-center md:flex-row justify-center  ">
+        <div className={` transition-opacity duration-1000 ${button ? 'opacity-100' : 'opacity-0'}  md:gap-4 w-full mt-4 flex flex-col  items-center md:flex-row justify-center`}>
         <NavLink to="/about">
 
         <div className="group  relative  tracking-tighter cursor-pointer mt-4 p-2 w-32  bg-white rounded-full overflow-hidden text-black text-center font-medium">
@@ -53,7 +83,7 @@ function Home() {
         </div>
 
       </div>
-      <div className="mt-40 md:mt-52 text-4xl tracking-tighter text-neutral-700 ">
+      <div className="mt-40 md:mt-52 text-4xl tracking-tighter text-zinc-700 ">
         Welcome to
       </div>
       <div className="text-5xl md:text-6xl  lg:text-8xl mt-2 font-bold text-center tracking-tighter text-black ">
@@ -92,7 +122,7 @@ function Home() {
       </div>
 
 
-      <div className="bg-[#0A3981] w-screen mt-14 md:mt-20 flex flex-col py-10 justify-center items-center lg:mt-28 px-6 md:px-12 h-[600px]">
+      <div className="bg-[#0A3981] w-screen mt-14 md:mt-20 flex flex-col py-10 justify-center items-center lg:mt-28 px-6 md:px-12 h-[500px] lg:h-[600px]">
 
         <h1 className="text-white font-bold text-4xl tracking-tight md:text-5xl lg:text-6xl">Why Choose Us?</h1>
 

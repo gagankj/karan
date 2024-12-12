@@ -1,48 +1,76 @@
 import React from 'react'
-import { IoMdCall } from "react-icons/io";
-import { GoMail } from "react-icons/go";
+import call from "../assets/call.gif"
 
-function Contact() {
+import mail from "../assets/mail.gif"
+
+const Contact = () => {
   return (
-    <div className=''>
-      <div className="flex relative flex-col justify-center items-center px-20 py-10 w-full min-h-[364px] max-md:px-5 max-md:max-w-full">
-        <img
-          loading="lazy"
-          srcSet="https://cdn.builder.io/api/v1/image/assets/TEMP/7e5329504af8eeeac2f775c34f2ac65eaaee929434501f2e0e8b0a52a61d6d9d?placeholderIfAbsent=true&apiKey=b3ab5871af914b8aa297a76ea135062a&width=100 100w, https://cdn.builder.io/api/v1/image/assets/TEMP/7e5329504af8eeeac2f775c34f2ac65eaaee929434501f2e0e8b0a52a61d6d9d?placeholderIfAbsent=true&apiKey=b3ab5871af914b8aa297a76ea135062a&width=200 200w, https://cdn.builder.io/api/v1/image/assets/TEMP/7e5329504af8eeeac2f775c34f2ac65eaaee929434501f2e0e8b0a52a61d6d9d?placeholderIfAbsent=true&apiKey=b3ab5871af914b8aa297a76ea135062a&width=400 400w, https://cdn.builder.io/api/v1/image/assets/TEMP/7e5329504af8eeeac2f775c34f2ac65eaaee929434501f2e0e8b0a52a61d6d9d?placeholderIfAbsent=true&apiKey=b3ab5871af914b8aa297a76ea135062a&width=800 800w, https://cdn.builder.io/api/v1/image/assets/TEMP/7e5329504af8eeeac2f775c34f2ac65eaaee929434501f2e0e8b0a52a61d6d9d?placeholderIfAbsent=true&apiKey=b3ab5871af914b8aa297a76ea135062a&width=1200 1200w, https://cdn.builder.io/api/v1/image/assets/TEMP/7e5329504af8eeeac2f775c34f2ac65eaaee929434501f2e0e8b0a52a61d6d9d?placeholderIfAbsent=true&apiKey=b3ab5871af914b8aa297a76ea135062a&width=1600 1600w, https://cdn.builder.io/api/v1/image/assets/TEMP/7e5329504af8eeeac2f775c34f2ac65eaaee929434501f2e0e8b0a52a61d6d9d?placeholderIfAbsent=true&apiKey=b3ab5871af914b8aa297a76ea135062a&width=2000 2000w, https://cdn.builder.io/api/v1/image/assets/TEMP/7e5329504af8eeeac2f775c34f2ac65eaaee929434501f2e0e8b0a52a61d6d9d?placeholderIfAbsent=true&apiKey=b3ab5871af914b8aa297a76ea135062a"
-          className="object-cover absolute inset-0 size-full"
-        />
-        <div className="flex pt-10 relative flex-col w-full max-w-[1475px] max-md:max-w-full">
-          <div className="text-8xl font-bold tracking-tighter text-center text-white max-md:max-w-full max-md:text-4xl">
-          Get in touch with Us
-          </div>
-          <div className="self-center mt-7 text-xl text-center md:text-4xl tracking-tighter text-zinc-100 max-md:max-w-full">
-          Reach out to us for any inquiries or assistance today!
-          </div>
-        </div>
-      </div>
+    <div className='pt-20 bg-[#D4EBF8]'>
 
-
-      <div className='flex py-20 px-32  justify-center gap-20'>
-        <div className='h-80 flex bg-gradient-to-br from-blue-100 to-blue-400 flex-col items-center p-10 w-96 border border-zinc-300  rounded-xl'>
-          <IoMdCall className='text-6xl text-blue-800' />
-          <h2 className='text-2xl mt-4 tracking-tight font-normal'>7788460018</h2>
-          <h2 className='mt-10 text-3xl tracking-tight font-medium'>Monday to Friday</h2>
-          <h2 className=''>9:00 AM to 6:00 PM</h2>
-        </div>
-        <div className='h-80 flex bg-gradient-to-br from-green-100 to-green-400 flex-col items-center p-10 w-96 border border-zinc-300  rounded-xl'>
-          <GoMail className='text-6xl text-green-800' />
-          <h2 className='text-2xl mt-4 tracking-tight font-normal'>karandrivingschoolltd@gmail.com</h2>
-          <h2 className='mt-10 text-3xl tracking-tight font-medium'>We respond within</h2>
-          <h2 className=''>24 Hours</h2>
-        </div>
+<div className="w-screen h-44  text-center py-10 text-white bg-[#0A3981]">
+        <h1 className='text-4xl   font-bold mb-2 px-2  md:text-5xl lg:text-7xl'>Get in Touch with us</h1>
         
+        <h1 className='lg:text-xl px-4' >We're here to help with all your driving education needs.</h1>
       </div>
 
-      <div className='flex flex-col items-center'>
 
-      <h1 className='text-6xl font-semibold tracking-tight'>Send a Message</h1>
-      <iframe className='mt-10' src="https://docs.google.com/forms/d/e/1FAIpQLSc6bGaRrdbVuaNbysBy7zGUwAx3tdTmXX7-FL0ikFylt3ZLkA/viewform?embedded=true" width="640" height="950" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+      <div className='py-10 flex flex-col lg:flex-row gap-10 items-center justify-center'>
+
+        <div className='flex flex-col items-center'>
+          <h1 className='mb-4 text-3xl font-bold tracking-tight text-[#0A3981]'>Contact Details</h1>
+          <div className='bg-white w-96 flex flex-col gap-4 rounded-xl py-4 px-2'>
+            <span className=''><img className='h-16 inline mr-2' src={call} alt="" />
+            <a    className='text-xl font-bold tracking-tight' href="tel:7788460018">7788460018</a>
+            </span>
+            <span><img className='h-16 mr-2 inline' src={mail} alt="" />
+            <a className='text-lg font-bold tracking-tight' href="mailto:karandrivingschoolltd@gmail.com">karandrivingschoolltd@gmail.com</a>
+            </span>
+            
+          </div>
+        </div>
+        <div className='flex flex-col items-center'>
+          <h1 className='mb-4 text-3xl font-bold tracking-tight text-[#0A3981]'>Operating Hours</h1>
+          <div className='bg-white w-96 h-40 lg:h-44 px-10 flex flex-col justify-center items-center gap-4 rounded-xl py-4 '>
+
+            <div className=' w-full gap-6 flex'>
+              <h1 className=' w-36 font-bold'>
+              Monday to Friday 
+                
+                </h1>
+            <span className='text-blue-500 font-bold'>9 AM - 6 PM</span>
+                </div>
+            <div className=' w-full gap-6 flex'>
+              <h1 className='w-36 font-bold '>
+              Saturday
+                
+                </h1>
+            <span className='text-blue-500 font-bold'>10 AM - 4 PM</span>
+                </div>
+            <div className=' w-full gap-6 flex'>
+              <h1 className='w-36 font-bold'>
+              Sunday 
+                
+                </h1>
+            <span className='text-red-500 font-bold'>CLOSED</span>
+                </div>
+            
+
+          </div>
+        </div>
       </div>
+
+      <h1 className='text-3xl tracking-tight py-10 text-center font-bold text-[#0A3981]'>Send Us a Message</h1>
+
+<div className='flex justify-center pb-20 '>
+
+      <iframe className='w-[310px] h-[600px] md:w-[500px] lg:w-2/3' src="https://docs.google.com/forms/d/e/1FAIpQLSc6bGaRrdbVuaNbysBy7zGUwAx3tdTmXX7-FL0ikFylt3ZLkA/viewform?embedded=true"   >Loading…</iframe>
+</div>
+
+
+
+
+
+
 
 
     </div>
