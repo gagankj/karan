@@ -8,10 +8,10 @@ export default {
     extend: {
       backgroundImage:{
         
-        "register":"url('register.png')",
-        "registerm":"url('register-mobile.png')",
-        "footer":"url('footer.png')",
-        "footerm":"url('footerm.png')"
+        "register":"url('/register.png')",
+        "registerm":"url('/register-mobile.png')",
+        "footer":"url('/footer.png')",
+        "footerm":"url('/footerm.png')"
       }
     },
   },
