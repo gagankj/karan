@@ -13,7 +13,7 @@ const App = () => {
     useEffect(() => {
         const timer = setTimeout(() => {
             setLoading(false);
-        }, 3000); // Preloader duration
+        }, 2000); // Preloader duration
 
         return () => clearTimeout(timer);
     }, []);
