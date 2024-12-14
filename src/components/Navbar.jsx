@@ -34,7 +34,7 @@ const Navbar = () => {
         <NavLink
           to="/"
           className={({ isActive }) =>
-            `hover:text-blue-500 ${isActive ? 'text-blue-500' : ''}`
+            `hover:text-blue-500 ${isActive ? 'text-blue-500 bg-white px-4 py-1 rounded-2xl' : ''}`
           }
           onClick={() => setIsMenuOpen(false)}
         >
@@ -43,7 +43,7 @@ const Navbar = () => {
         <NavLink
           to="/about"
           className={({ isActive }) =>
-            `hover:text-blue-500 ${isActive ? 'text-blue-500' : ''}`
+            `hover:text-blue-500 ${isActive ? 'text-blue-500 bg-white px-4 py-1 rounded-2xl' : ''}`
           }
           onClick={() => setIsMenuOpen(false)}
         >
@@ -52,7 +52,7 @@ const Navbar = () => {
         <NavLink
           to="/packages"
           className={({ isActive }) =>
-            `hover:text-blue-500 ${isActive ? 'text-blue-500' : ''}`
+            `hover:text-blue-500 ${isActive ? 'text-blue-500 bg-white px-4 py-1 rounded-2xl' : ''}`
           }
           onClick={() => setIsMenuOpen(false)}
         >
@@ -61,7 +61,7 @@ const Navbar = () => {
         <NavLink
           to="/resources"
           className={({ isActive }) =>
-            `hover:text-blue-500 ${isActive ? 'text-blue-500' : ''}`
+            `hover:text-blue-500 ${isActive ? 'text-blue-500 bg-white px-4 py-1 rounded-2xl' : ''}`
           }
           onClick={() => setIsMenuOpen(false)}
         >
@@ -70,7 +70,7 @@ const Navbar = () => {
         <NavLink
           to="/faq"
           className={({ isActive }) =>
-            `hover:text-blue-500 ${isActive ? 'text-blue-500' : ''}`
+            `hover:text-blue-500 ${isActive ? 'text-blue-500 bg-white px-4 py-1 rounded-2xl' : ''}`
           }
           onClick={() => setIsMenuOpen(false)}
         >
@@ -79,29 +79,34 @@ const Navbar = () => {
         <NavLink
           to="/contact"
           className={({ isActive }) =>
-            `hover:text-blue-500 ${isActive ? 'text-blue-500' : ''}`
+            `hover:text-blue-500 ${isActive ? 'text-blue-500 rounded-2xl bg-white py-1 px-4' : ''}`
           }
           onClick={() => setIsMenuOpen(false)}
         >
           Contact
         </NavLink>
+
         <NavLink
           to="/register"
-          className="md:hidden text-white px-4 py-1 rounded-2xl bg-blue-500"
+          className=" md:hidden text-white px-4 py-1 rounded-2xl bg-blue-500"
           onClick={() => setIsMenuOpen(false)}
         >
-          Register
+          Book Now
         </NavLink>
+        
+        
       </div>
 
       {/* Call to Action Button */}
       <div className="hidden md:block">
-        <NavLink
+      <NavLink
           to="/register"
-          className="bg-blue-500 text-white rounded-3xl px-4 py-2 transition duration-300 ease-in-out hover:bg-white hover:text-blue-500"
+          className=" text-white px-4 py-2 rounded-2xl bg-blue-500"
+          onClick={() => setIsMenuOpen(false)}
         >
-          Register
+          Book Now
         </NavLink>
+      
       </div>
     </nav>
   );

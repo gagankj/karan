@@ -19,7 +19,7 @@ const Resources = () => {
       </div>
 
       <div className='py-10 lg:py-20 text-center gap-6 md:gap-2 lg:gap-10 px-6 flex flex-col md:flex-row items-center justify-center'>
-        <div className='w-72 h-60 py-4 justify-center flex flex-col items-center lg:w-80 rounded-xl bg-white'>
+        <div className='w-72 h-60 hover:scale-105 transition-transform duration-300 ease-in-out shadow-md py-4 justify-center flex flex-col items-center lg:w-80 rounded-xl bg-white'>
           <img className='h-20' src={icbc} alt="" />
           <h1 className='font-bold tracking-tight mt-2 text-xl'>ICBC Road Test</h1>
           <p className='text-zinc-700'>Book your ICBC road test.</p>
@@ -27,7 +27,7 @@ const Resources = () => {
             Book Now
           </a>
         </div>
-        <div className='w-72 h-60 justify-center  py-4  flex flex-col items-center lg:w-80 rounded-xl bg-white'>
+        <div className='w-72 h-60 justify-center  py-4  flex flex-col items-center lg:w-80 hover:scale-105 transition-transform duration-300 ease-in-out shadow-md rounded-xl bg-white'>
           <img className='h-20' src={book} alt="" />
           <h1 className='font-bold tracking-tight mt-2 text-xl'>Drive Smart Handbook</h1>
           <p className='text-zinc-700' >Learn to drive smart with the official handbook</p>
@@ -35,7 +35,7 @@ const Resources = () => {
             Learn Now
           </a>
         </div>
-        <div className='w-72 h-60 py-4 justify-center flex flex-col items-center lg:w-80 rounded-xl bg-white'>
+        <div className='w-72 h-60 py-4 justify-center flex flex-col items-center lg:w-80 rounded-xl hover:scale-105 transition-transform duration-300 ease-in-out shadow-md bg-white'>
           <img className='h-20' src={test} alt="" />
           <h1 className='font-bold tracking-tight mt-2 text-xl'>Knowledge Test</h1>
           <p className='text-zinc-700'>Take the knowledge test to prepare for driving</p>
@@ -45,7 +45,7 @@ const Resources = () => {
         </div>
       </div>
       <div className=' pb-20 text-center gap-6 md:gap-2 lg:gap-10 px-6 flex flex-col md:flex-row items-center justify-center'>
-        <div className='w-72 h-60 py-4 justify-center flex flex-col items-center lg:w-80 rounded-xl bg-white'>
+        <div className='w-72 h-60 py-4 justify-center flex flex-col items-center lg:w-80 hover:scale-105 transition-transform duration-300 ease-in-out  shadow-md rounded-xl bg-white'>
           <img className='h-20' src={sign} alt="" />
           <h1 className='font-bold tracking-tight mt-2 text-xl'>Road Signs</h1>
           <p className='text-zinc-700'>Test your knowledge of road signs.</p>
@@ -53,7 +53,7 @@ const Resources = () => {
            Take Test
           </a>
         </div>
-        <div className='w-72 h-60 justify-center  py-4  flex flex-col items-center lg:w-80 rounded-xl bg-white'>
+        <div className='w-72 h-60 justify-center  py-4  flex flex-col items-center lg:w-80 hover:scale-105 transition-transform duration-300 ease-in-out shadow-md   rounded-xl bg-white'>
           <img className='h-20' src={safety} alt="" />
           <h1 className='font-bold tracking-tight mt-2 text-xl'>Road Safety</h1>
           <p className='text-zinc-700' >Download the Street Sense road safety guide.</p>

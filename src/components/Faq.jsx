@@ -2,12 +2,13 @@
 import React, { useState } from 'react';
 import { AnimatePresence, motion } from 'framer-motion';
 import { Plus } from 'lucide-react';
+import { NavLink } from 'react-router-dom';
 
 const tabs = [
   {
     title: 'Do you offer pick-up and drop-off services?',
     description:
-      'Yes, we provide convenient pick-up and drop-off services in Delta, Surrey, and Vancouver.',
+      'Yes, we provide convenient pick-up and drop-off services in Delta, Surrey, Vancouver and nearby areas.',
     
   },
   {
@@ -22,6 +23,12 @@ const tabs = [
       ' The course duration ranges from 1–4 weeks depending on the program type and schedule flexibility.',
     
   },
+  {
+    title: 'How far in advance do i need to cancel the driving session?',
+    description:
+      'You need to cancel at least 48 hours before the session time on a phone call.',
+    
+  },
 ];
 const tabs2 = [
   {
@@ -33,13 +40,39 @@ const tabs2 = [
   {
     title: 'Can I mix session durations within a package?',
     description:
-      'No, each package is designed for a fixed session duration of either 60 or 90 minutes.',
+      'Each package is designed for a fixed session duration of either 60 or 90 minutes, but you can also contact us for specific duration of session.',
     
   },
   {
     title: 'Are there discounts for purchasing multiple sessions?',
     description:
-      ' Yes, our 5- and 10-session packages offer cost savings compared to individual session rates.',
+      ' Yes, our 5 and 10 session packages offer cost savings compared to individual session rates.',
+    
+  },
+];
+const tabs3 = [
+  {
+    title: 'Are your vehicles equipped with double controls?',
+    description:
+      'Yes, all our training vehicles are equipped with dual controls to ensure the instructor can intervene if necessary.',
+    
+  },
+  {
+    title: 'What safety precautions do instructors take during lessons?',
+    description:
+      'Our instructors prioritize safety by maintaining a calm environment, using dual controls, and providing clear instructions at all times.',
+    
+  },
+  {
+    title: 'Do your lessons include emergency driving techniques?',
+    description:
+      'Yes, our lessons cover essential emergency techniques like sudden braking, hazard awareness, and evasive maneuvers.',
+    
+  },
+  {
+    title: 'What is your policy in case of accidents during lessons?',
+    description:
+      'Our vehicles are insured, and instructors take full control to prevent accidents; in rare cases, we handle incidents professionally and promptly.',
     
   },
 ];
@@ -60,6 +93,14 @@ function Faq() {
     setActiveIndex2(activeIndex2 === index ? null : index);
     const newActiveItem2 = tabs2.find((_, i) => i === index);
     setActiveItem2(newActiveItem2);
+  };
+
+  const [activeIndex3, setActiveIndex3] = useState(0);
+  const [activeItem3, setActiveItem3] = useState(tabs3[0]);
+  const handleClick3 = async (index) => {
+    setActiveIndex3(activeIndex3 === index ? null : index);
+    const newActiveItem3 = tabs2.find((_, i) => i === index);
+    setActiveItem3(newActiveItem3);
   };
 
   return (
@@ -129,7 +170,7 @@ function Faq() {
             <motion.div
               key={index}
               className={`overflow-hidden ${
-                index !== tabs.length - 1 ? 'border-b' : ''
+                index !== tabs2.length - 1 ? 'border-b' : ''
               }`}
               onClick={() => handleClick2(index)}
             >
@@ -173,6 +214,55 @@ function Faq() {
 
 
         </div>
+
+        <h2 className='text-3xl md:text-4xl  font-bold  text-center tracking-tight text-black'>Safety Related Questions</h2>
+      <div className='h-fit border mx-10 my-10  rounded-lg p-2 text-black bg-white'>
+        
+          {tabs3.map((tab, index) => (
+            <motion.div
+              key={index}
+              className={`overflow-hidden ${
+                index !== tabs3.length - 1 ? 'border-b' : ''
+              }`}
+              onClick={() => handleClick3(index)}
+            >
+              <button
+                className={`p-3 px-2 font-bold text-lg text-zinc-800 tracking-tight w-full cursor-pointer sm:text-base  text-start transition-all      flex gap-2 
+               `}
+              >
+                <Plus
+                  className={`${
+                    activeIndex3 === index ? 'rotate-45' : 'rotate-0 '
+                  } transition-transform  ease-in-out w-5 h-5   text-gray-600`}
+                />
+                {tab.title}
+              </button>
+              <AnimatePresence mode='sync'>
+                {activeIndex3 === index && (
+                  <motion.div
+                    initial={{ height: 0, opacity: 0 }}
+                    animate={{ height: 'auto', opacity: 1 }}
+                    exit={{ height: 0, opacity: 0 }}
+                    transition={{
+                      duration: 0.3,
+                      ease: 'easeInOut',
+                      delay: 0.14,
+                    }}
+                  >
+                    <p
+                      className={` text-zinc-700 p-3 text-sm md:text-lg pt-0 `}
+                    >
+                      {tab.description}
+                    </p>
+                  </motion.div>
+                )}
+              </AnimatePresence>
+            </motion.div>
+          ))}
+        </div>
+
+
+        <h1 className='px-10 text-2xl py-10 text-center font-bold tracking-tight'>Got any Other Queries, Contact us or fill the Inquiry Form on <NavLink className="text-blue-500 italic underline" to="/contact">Contact Page</NavLink> </h1>
 
 
       

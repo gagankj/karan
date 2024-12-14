@@ -18,9 +18,9 @@ const Contact = () => {
 
         <div className='flex flex-col items-center'>
           <h1 className='mb-4 text-3xl font-bold tracking-tight text-[#0A3981]'>Contact Details</h1>
-          <div className='bg-white w-96 flex flex-col gap-4 rounded-xl py-4 px-2'>
+          <div className='bg-white hover:scale-105 transition-transform duration-300 ease-in-out shadow-md w-96 flex flex-col gap-4 rounded-xl py-4 px-2'>
             <span className=''><img className='h-16 inline mr-2' src={call} alt="" />
-            <a    className='text-xl font-bold tracking-tight' href="tel:7788460018">7788460018</a>
+            <a    className='text-xl font-bold tracking-tight' href="tel:+17788460018">+17788460018</a>
             </span>
             <span><img className='h-16 mr-2 inline' src={mail} alt="" />
             <a className='text-lg font-bold tracking-tight' href="mailto:karandrivingschoolltd@gmail.com">karandrivingschoolltd@gmail.com</a>
@@ -30,7 +30,7 @@ const Contact = () => {
         </div>
         <div className='flex flex-col items-center'>
           <h1 className='mb-4 text-3xl font-bold tracking-tight text-[#0A3981]'>Operating Hours</h1>
-          <div className='bg-white w-96 h-40 lg:h-44 px-10 flex flex-col justify-center items-center gap-4 rounded-xl py-4 '>
+          <div className='bg-white hover:scale-105 transition-transform duration-300 ease-in-out shadow-md w-96 h-40 lg:h-44 px-10 flex flex-col justify-center items-center gap-4 rounded-xl py-4 '>
 
             <div className=' w-full gap-6 flex'>
               <h1 className=' w-36 font-bold'>

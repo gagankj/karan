@@ -27,7 +27,11 @@ const About = () => {
 
       <div className='flex lg:px-32 text-zinc-700 mt-4 flex-col-reverse gap-6 items-center lg:items-start
       lg:text-2xl lg:mt-10 tracking-tight md:flex-row'>
-        <p className='lg:pt-6'>Welcome to Karan Driving School, where driving excellence meets personalized instruction. We are dedicated to empowering individuals with the skills, confidence, and knowledge they need to become safe and responsible drivers. Whether you’re just starting or need advanced training, we’re here to guide you every step of the way.</p>
+        <p className='lg:pt-6 text-xl'>Looking for a reliable driving school in Metro Vancouver? Karan Driving School offers top-quality lessons to help you build the skills, confidence, and knowledge to drive safely and responsibly.
+
+As a proud part of the Metro Vancouver community, we provide personalized instruction for all skill levels—whether you’re a beginner or looking to refine advanced techniques. Our certified instructors are committed to professionalism, patience, and community service, ensuring you get the best learning experience.
+
+Join us today and see why Karan Driving School is Metro Vancouver’s trusted choice for driving education. Let’s hit the road to safety and confidence together!</p>
 
         <img className='w-44 h-32 lg:w-80 lg:h-64' src={logo} alt="" />
 
@@ -35,13 +39,13 @@ const About = () => {
     
       </div>
 
-      <div className='w-screen h-[630px] md:h-[460px] px-10 py-10 justify-center items-center  flex flex-col gap-8 lg:gap-14 md:flex-row bg-[#0A3981]'>
+      <div className='w-screen  md:px-10 py-10 justify-center items-center  flex flex-col gap-8 lg:gap-14 lg:flex-row bg-[#0A3981]'>
 
-        <div className='bg-white w-80 lg:w-96 flex flex-col items-center rounded-xl h-80'>
+        <div className='bg-white hover:scale-105 transition-transform duration-300 ease-in-out w-80 md:h-[380px] md:w-[600px] flex flex-col items-center rounded-xl h-[450px]'>
           <img className='h-32' src={mission} alt="" />
 
           <h1 className='text-3xl font-bold md:text-4xl lg:text-5xl tracking-tight mt-2 text-[#0A3981]'>Mission</h1>
-          <p className='text-center my-2  md:text-xl px-6 text-zinc-700'>To instill safe driving habits and prepare students for a lifetime of responsible driving.</p>
+          <p className=' my-2  md:text-xl px-6 text-zinc-700'>Our mission is to deliver high-quality, personalized driving lessons designed to empower individuals with the skills, confidence, and responsibility to drive safely. We are committed to promoting road safety and enhancing the well-being of the Metro Vancouver community through professional instruction and a focus on lifelong safe driving habits.</p>
           
           
           
@@ -49,10 +53,10 @@ const About = () => {
 
         </div>
 
-        <div className='bg-white w-80 lg:w-96 flex flex-col items-center rounded-xl h-80'>
+        <div className='bg-white hover:scale-105 transition-transform duration-300 ease-in-out w-80 md:h-[380px] md:w-[600px] flex flex-col items-center rounded-xl h-[450px]'>
           <img className='h-32' src={vision} alt="" />
           <h1 className='text-3xl font-bold md:text-4xl lg:text-5xl tracking-tight mt-2 text-[#0A3981]'>Vision</h1>
-          <p className='text-center my-2 md:text-xl px-6  text-zinc-700'>To be a trusted leader in driver education, shaping safe drivers for a safer community.</p>
+          <p className=' my-2 md:text-xl px-6  text-zinc-700'>Our vision is to be the top choice for a driving school in Metro Vancouver, recognized for shaping confident and responsible drivers who prioritize road safety. Through our dedication to education excellence and community engagement, we strive to set the benchmark for superior driving instruction and safety awareness across the region.</p>
 
         </div>
       </div>
@@ -106,13 +110,13 @@ const About = () => {
         <h1 className='text-xl text-zinc-700 my-2'>Safety is at the heart of our training.</h1>
 
         <div className='flex flex-col items-center justify-center mt-4 text-white font-bold md:flex-row gap-4 lg:gap-10 '>
-          <div className='w-60 h-32 flex items-center hover:scale-105 hover:ease-in-out hover:transition py-4 px-4 rounded-lg bg-[#0A3981]'>
+          <div className='w-60 h-32 flex items-center hover:scale-105 transition-transform duration-300 ease-in-out py-4 px-4 rounded-lg bg-[#0A3981]'>
             <h1 className='text-2xl'>Traffic Rules and Regulations</h1>
           </div>
-          <div className='w-60 h-32 hover:ease-in-out hover:transition hover:scale-105 py-4 px-4 rounded-lg  bg-[#0A3981]'>
+          <div className='w-60 h-32  hover:scale-105 transition-transform duration-300 ease-in-out py-4 px-4 rounded-lg  bg-[#0A3981]'>
             <h1 className='text-2xl'>Emergency Handling Techniques</h1>
           </div>
-          <div className='w-60 h-32 hover:ease-in-out hover:transition hover:scale-105 flex items-center py-4 px-4 rounded-lg  bg-[#0A3981]'>
+          <div className='w-60 h-32 hover:scale-105 transition-transform duration-300 ease-in-out flex items-center py-4 px-4 rounded-lg  bg-[#0A3981]'>
             <h1 className='text-2xl'>Defensive Driving Practices</h1>
           </div>
         </div>
@@ -127,13 +131,13 @@ const About = () => {
         <h1 className='text-xl text-white my-2'>We proudly serve students in Lower Mainland and surrounding areas, including:</h1>
 
         <div className='flex flex-col items-center justify-center mt-4 text-white font-bold md:flex-row gap-4 lg:gap-10 '>
-          <div className='w-60 h-36 hover:ease-in-out hover:transition hover:scale-105 flex items-center py-4 px-4 rounded-lg bg-white'>
+          <div className='w-60 h-36 hover:scale-105 transition-transform duration-300 ease-in-out flex items-center py-4 px-4 rounded-lg bg-white'>
             <h1 className='text-2xl text-zinc-700'>Teenagers Preparing for Their First License</h1>
           </div>
-          <div className='w-60 h-36 hover:ease-in-out hover:transition hover:scale-105   py-4 px-4 flex items-center rounded-lg  bg-white'>
+          <div className='w-60 h-36 hover:scale-105 transition-transform duration-300 ease-in-out   py-4 px-4 flex items-center rounded-lg  bg-white'>
             <h1 className='text-2xl text-zinc-700'>Adult Learners Starting Fresh</h1>
           </div>
-          <div className='w-60 h-36 hover:ease-in-out hover:transition hover:scale-105 flex items-center   py-4 px-4 rounded-lg  bg-white'>
+          <div className='w-60 h-36 hover:scale-105 transition-transform duration-300 ease-in-out flex items-center   py-4 px-4 rounded-lg  bg-white'>
             <h1 className='text-2xl text-zinc-700'>Drivers Looking to Regain Confidence</h1>
           </div>
         </div>

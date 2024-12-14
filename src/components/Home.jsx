@@ -91,13 +91,11 @@ function Home() {
       </div>
       
       <div className="md:mt-14 w-full px-6 md:px-10 lg:px-14  max-w-[1486px]  max-md:max-w-full">
-        <div className="flex gap-5 max-md:flex-col-reverse">
-          <div className="flex flex-col w-6/12 max-md:ml-0 max-md:w-full">
-            <div className="   w-full md:pt-10 lg:pt-0  text-2xl lg:text-3xl tracking-tight   text-zinc-700
+        <div className="flex gap-5 lg:flex-row flex-col-reverse">
+          <div className="flex flex-col px-2 lg:w-1/2 max-md:ml-0 max-md:w-full">
+            <div className="   w-full md:pt-10 lg:pt-0  text-xl   tracking-tight   text-zinc-700
             max-md:mt-4  max-md:max-w-full max-md:text-xl max-md:leading-[30px]">
-              Our mission is to turn every learner into a confident driver with
-              personalized lessons and expert guidance. Whether you’re a
-              beginner or brushing up your skills, we’re here to help!
+              Welcome to Karan Driving School, your trusted partner on the journey to safe and confident driving. Our mission is to provide exceptional driving education that not only equips you with the skills to navigate the road but also instills a lifelong commitment to safety and responsibility. With our team of experienced, patient instructors and tailored training programs, we create a supportive environment where every learner thrives. Whether you’re a beginner or seeking to enhance your skills, we’re here to guide you every step of the way. Join us at Karan Driving School and take the wheel with confidence and purpose.
             </div>
       <NavLink className="flex justify-center mt-10 md:justify-start" to="/about">
 
@@ -111,7 +109,7 @@ function Home() {
 </div>
 </NavLink>
           </div>
-          <div className="flex flex-col   w-6/12 max-md:w-full">
+          <div className="flex flex-col   w-full lg:w-1/2 max-md:w-full">
             <img
               loading="lazy"
               srcSet="https://cdn.builder.io/api/v1/image/assets/TEMP/2fd7307bf5a6829eae5ea4f19579ad95147b53d133ea97635cfc0923530eb8a7?placeholderIfAbsent=true&apiKey=b3ab5871af914b8aa297a76ea135062a&width=100 100w, https://cdn.builder.io/api/v1/image/assets/TEMP/2fd7307bf5a6829eae5ea4f19579ad95147b53d133ea97635cfc0923530eb8a7?placeholderIfAbsent=true&apiKey=b3ab5871af914b8aa297a76ea135062a&width=200 200w, https://cdn.builder.io/api/v1/image/assets/TEMP/2fd7307bf5a6829eae5ea4f19579ad95147b53d133ea97635cfc0923530eb8a7?placeholderIfAbsent=true&apiKey=b3ab5871af914b8aa297a76ea135062a&width=400 400w, https://cdn.builder.io/api/v1/image/assets/TEMP/2fd7307bf5a6829eae5ea4f19579ad95147b53d133ea97635cfc0923530eb8a7?placeholderIfAbsent=true&apiKey=b3ab5871af914b8aa297a76ea135062a&width=800 800w, https://cdn.builder.io/api/v1/image/assets/TEMP/2fd7307bf5a6829eae5ea4f19579ad95147b53d133ea97635cfc0923530eb8a7?placeholderIfAbsent=true&apiKey=b3ab5871af914b8aa297a76ea135062a&width=1200 1200w, https://cdn.builder.io/api/v1/image/assets/TEMP/2fd7307bf5a6829eae5ea4f19579ad95147b53d133ea97635cfc0923530eb8a7?placeholderIfAbsent=true&apiKey=b3ab5871af914b8aa297a76ea135062a&width=1600 1600w, https://cdn.builder.io/api/v1/image/assets/TEMP/2fd7307bf5a6829eae5ea4f19579ad95147b53d133ea97635cfc0923530eb8a7?placeholderIfAbsent=true&apiKey=b3ab5871af914b8aa297a76ea135062a&width=2000 2000w, https://cdn.builder.io/api/v1/image/assets/TEMP/2fd7307bf5a6829eae5ea4f19579ad95147b53d133ea97635cfc0923530eb8a7?placeholderIfAbsent=true&apiKey=b3ab5871af914b8aa297a76ea135062a"
@@ -163,6 +161,31 @@ function Home() {
 
 
       </div>
+
+      <div className='py-10 px-10 md:px-20'>
+
+
+        <h1 className='text-4xl font-bold md:text-6xl tracking-tight text-center mb-6'>What We Offer?</h1>
+        <p className='text-zinc-700'>We offer high-quality, personalized driving lessons to help you become a safe, confident driver. With a variety of driving packages and helpful resources, we provide the support you need to successfully obtain your driver’s license.</p>
+        <div className='flex flex-col md:flex-row text-center lg:px-14 gap-10 lg:gap-14 py-10'>
+          <div className='flex flex-col justify-center items-center'>
+            <h1 className='text-2xl lg:text-3xl font-bold tracking-tight mb-4'>Our Driving Packages</h1>
+            <div className='bg-[#0A3981] p-6 rounded-xl lg:text-2xl lg:w-full transition-transform duration-300 ease-in-out hover:scale-105 w-80 md:w-72 text-white'>
+              <p>We offer flexible driving packages for all skill levels, from beginner lessons to advanced sessions. Our certified instructors will ensure you're fully prepared, whether you're just starting or refreshing your skills.</p>
+            </div>
+          </div>
+          <div className='flex flex-col justify-center items-center'>
+            <h1 className='text-2xl lg:text-3xl font-bold tracking-tight mb-4'>Resources</h1>
+            <div className='bg-[#0A3981] p-6 w-80 md:w-72 rounded-xl lg:text-2xl transition-transform duration-300 ease-in-out lg:w-full hover:scale-105 text-white'>
+              <p>We provide key resources, including exam preparation, driving test booking assistance, and helpful links for the licensing process to make your journey to a driver’s license smooth and easy.</p>
+            </div>
+          </div>
+          
+        </div>
+
+
+        
+      </div>
       
       
       
@@ -191,8 +214,8 @@ function Home() {
                 </div>
 
                 <div className="relative grid max-w-lg grid-cols-1 gap-6 mx-auto md:max-w-none lg:gap-10 md:grid-cols-3">
-                    <div className="flex flex-col overflow-hidden shadow-xl">
-                        <div className="flex flex-col justify-between flex-1 p-6 bg-white lg:py-8 lg:px-7">
+                    <div className="flex hover:scale-105 transition-transform duration-300 rounded-xl ease-in-out  flex-col overflow-hidden shadow-xl">
+                        <div className="flex flex-col justify-between flex-1 p-6  bg-white lg:py-8 lg:px-7">
                             <div className="flex-1">
                                 <div className="flex justify-center items-center">
                                     <svg className="w-5 h-5 text-[#FDB241]" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
@@ -237,7 +260,7 @@ function Home() {
                         </div>
                     </div>
 
-                    <div className="flex flex-col overflow-hidden shadow-xl">
+                    <div className="flex hover:scale-105 transition-transform duration-300 rounded-xl ease-in-out flex-col overflow-hidden shadow-xl">
                         <div className="flex flex-col justify-between flex-1 p-6 bg-white lg:py-8 lg:px-7">
                             <div className="flex-1">
                                 <div className="flex justify-center items-center">
@@ -283,7 +306,7 @@ function Home() {
                         </div>
                     </div>
 
-                    <div className="flex flex-col overflow-hidden shadow-xl">
+                    <div className="flex hover:scale-105 transition-transform duration-300 ease-in-out  flex-col rounded-xl overflow-hidden shadow-xl">
                         <div className="flex flex-col justify-between flex-1 p-6 bg-white lg:py-8 lg:px-7">
                             <div className="flex-1">
                                 <div className="flex justify-center items-center">
