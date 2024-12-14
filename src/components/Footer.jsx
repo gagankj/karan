@@ -1,6 +1,6 @@
 import { div } from "framer-motion/client";
 import React from "react";
-import { FaFacebook, FaTwitter, FaInstagram, FaLinkedin } from "react-icons/fa";
+import { FaFacebook, FaTwitter, FaInstagram, FaLinkedin, FaWhatsapp } from "react-icons/fa";
 import { NavLink } from "react-router-dom";
 const Footer = () => {
   return (
@@ -34,11 +34,11 @@ const Footer = () => {
           <div className="mt-6 lg:mt-0 flex space-x-6">
             {/* <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="hover:text-blue-500">
               <FaFacebook size={24} />
-            </a>
-            <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="hover:text-blue-500">
-              <FaTwitter size={24} />
             </a> */}
-            <a href="https://www.instagram.com/karandrivingschool/" target="_blank" rel="noopener noreferrer" className="hover:text-blue-500">
+            <a href="https://wa.me/+17788460018" target="_blank" rel="noopener noreferrer" className="hover:text-green-500">
+              <FaWhatsapp size={24} />
+            </a>
+            <a href="https://www.instagram.com/karandrivingschool/" target="_blank" rel="noopener noreferrer" className="hover:text-pink-500">
               <FaInstagram size={24} />
             </a>
             
