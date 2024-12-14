@@ -8,7 +8,7 @@ const Preloader = () => {
     useEffect(() => {
         const interval = setInterval(() => {
             setProgress((prev) => (prev < 100 ? prev + 1 : 100));
-        }, 20); // Update every 30ms to complete in ~3 seconds
+        }, 10); // Update every 30ms to complete in ~3 seconds
 
         return () => clearInterval(interval);
     }, []);
