@@ -1,6 +1,6 @@
 // src/components/Preloader.jsx
 import React, { useState, useEffect } from 'react';
-import car from "../assets/car.gif"
+import logo from "../assets/logo.png"
 
 const Preloader = () => {
     const [progress, setProgress] = useState(0);
@@ -17,9 +17,9 @@ const Preloader = () => {
         <div className="flex flex-col items-center justify-center h-screen bg-white">
             {/* Centered GIF */}
             <img
-                src={car} // Replace with your GIF path
+                src={logo} // Replace with your GIF path
                 alt="Loading Icon"
-                className="w-44 h-44 mb-4"
+                className="w-44 animate-bounce mb-4"
             />
             {/* Loading Text with Percentage */}
             <p className="text-lg font-medium text-gray-800">
